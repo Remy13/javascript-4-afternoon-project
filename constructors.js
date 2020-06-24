@@ -14,7 +14,10 @@
   The values for the make and model will come from two parameters, make and model (in that order).
 */
 
-// Code here
+function CarFactory(make, model){
+  this.make = make
+  this.model = model
+}
 
 ////////// PROBLEM 2 //////////
 
@@ -32,8 +35,8 @@ function Employee(name, email, hireDate) {
     Invoke the constructor function above and pass in 'Bob', 'bob@gmail.com', and '01-02-98' as arguments.
     Assign the result of the invocation to a variable called bob.
   */
-  
-  // Code here
+
+  const bob = new Employee('Bob', 'bob@gmail.com', '01-02-98')
   
   ////////// PROBLEM 3 //////////
   
@@ -56,7 +59,17 @@ function Employee(name, email, hireDate) {
       invoking moveCar on the right object (prius vs mustang).
   */
   
-  // Code here
+  function Car(make, model, year){
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.move = 0;
+    this.moveCar = function (){
+      this.move += 10;
+      return this.move
+
+    }
+  }
   
   ////////// PROBLEM 4 //////////
   
@@ -69,10 +82,7 @@ function Employee(name, email, hireDate) {
     Change the rating property to become this new number and return the updated rating.
   */
   
-  function Movie(name, genre, rating) {
-    this.name = name;
-    this.genre = genre;
-    this.rating = rating;
+  function Movie(["name", "genre", "rating"]) {
   }
   
   // Code here
@@ -83,7 +93,12 @@ function Employee(name, email, hireDate) {
   
   // Once the User constructor function is created, write a prototype method for the User function. Name this method addSavedPost. It should take in three parameters: id (a number), title (a string) and rating (a number). Use these parameters to create a new object and add it to the savedPosts array. Make sure to name the properties the same as described previously (id, title, rating).
   
-  // Code here
+  function User(name, age, email, savedPoints){
+    this.name = name
+    this.age = age
+    this.email = email
+    this.savedPoints = savedPoints
+}
   
   ////////// PROBLEM 6 //////////
   
