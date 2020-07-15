@@ -17,7 +17,13 @@
   getUsername --> which is a function that returns the current object's username property. *Don't use 'user' instead use the 'this' keyword*
 */
 
-
+var object = {
+  userName:"CLye",
+  email:"reigna8a8@gmail.com",
+  getUserName: function(){
+    return(this.userName);
+  }   
+}
 
 ////////// PROBLEM 2 //////////
 
@@ -38,7 +44,7 @@ function Animal(name, species, food) {
 }
 
 //Code Here
-
+var animal1 = new Animal('Tion', 'Liger', "annoying people"  )
 ////////// PROBLEM 3 //////////
 
 /*
@@ -56,7 +62,7 @@ let who = {
 }
 
 //Code Here
-
+var whoSaysHi = sayHi.bind(this.who[name[age[location]]]);
 ////////// PROBLEM 4 //////////
 
 /*

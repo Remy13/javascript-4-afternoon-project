@@ -15,8 +15,8 @@
 */
 
 function CarFactory(make, model){
-  this.make = make
-  this.model = model
+  this.make = make;
+  this.model = model;
 }
 
 ////////// PROBLEM 2 //////////
@@ -28,7 +28,6 @@ function Employee(name, email, hireDate) {
     this.email = email;
     this.hireDate = hireDate;
   }
-  
   // Do not edit the code above.
   
   /*
@@ -36,7 +35,7 @@ function Employee(name, email, hireDate) {
     Assign the result of the invocation to a variable called bob.
   */
 
-  const bob = new Employee('Bob', 'bob@gmail.com', '01-02-98')
+ var bob = new Employee ('Bob', 'bob@gmail.com', '01-02-98' );
   
   ////////// PROBLEM 3 //////////
   
@@ -81,12 +80,17 @@ function Employee(name, email, hireDate) {
     Find the average between the old rating and the new rating.
     Change the rating property to become this new number and return the updated rating.
   */
-  
-  function Movie(["name", "genre", "rating"]) {
+  function Movie(name, genre, rating){
+    this.name = name;
+    this.genre = genre;
+    this.rating = rating;
+    this.changeRating = function changeRating(){
+      return this.rating 
+    }
   }
-  
+
   // Code here
-  
+  personalbar.prototype.
   ////////// PROBLEM 5 //////////
   
   // Write a constructor function called User. This function should take in 4 parameters called name, age, email, and savedPosts in that order. Name and email will be strings, age will be a number and savedPosts will be an array of objects. These objects will each have 3 properties: id (a number), title (a string), and rating (a number between 1 and 5). These objects are the posts that the user will have saved to their account.
