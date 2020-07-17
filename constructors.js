@@ -90,20 +90,30 @@ function Employee(name, email, hireDate) {
   }
 
   // Code here
-  personalbar.prototype.
+  Movie.prototype.changeRating = function(new_rating){
+    this.rating = (this.rating + new_rating) / 2 
+    return this.rating;
+  }
   ////////// PROBLEM 5 //////////
   
   // Write a constructor function called User. This function should take in 4 parameters called name, age, email, and savedPosts in that order. Name and email will be strings, age will be a number and savedPosts will be an array of objects. These objects will each have 3 properties: id (a number), title (a string), and rating (a number between 1 and 5). These objects are the posts that the user will have saved to their account.
   
   // Once the User constructor function is created, write a prototype method for the User function. Name this method addSavedPost. It should take in three parameters: id (a number), title (a string) and rating (a number). Use these parameters to create a new object and add it to the savedPosts array. Make sure to name the properties the same as described previously (id, title, rating).
   
-  function User(name, age, email, savedPoints){
+  function User(name, age, email, savedPosts){
     this.name = name
     this.age = age
     this.email = email
-    this.savedPoints = savedPoints
+    this.savedPosts = savedPosts
 }
-  
+  User.prototype.addSavedPost = function(id, title, rating){
+    var newPosts = {
+      id: id,
+      title: title,
+      rating: rating
+    } 
+    this.savedPosts.push(newPosts);
+  }
   ////////// PROBLEM 6 //////////
   
   // You will be using the constructor function you just created in problem 5.
@@ -111,6 +121,18 @@ function Employee(name, email, hireDate) {
   
   // Code here
   
+  User.prototype.removeSavedPost = function(id){
+    console.log(id)
+    for(i = 0; i < this.savedPosts.length; i++ ){
+      console.log(this.savedPosts[i])
+      if(this.savedPosts[i].id === id){
+        // console.log(this.savedPosts[i])
+        this.savedPosts.splice( i ,1 ) 
+        console.log(this.savedPosts)
+      }
+    }
+  }
+
   ////////// PROBLEM 7 //////////
   
   // You will continue to use the constructor function you created in problem 5.
